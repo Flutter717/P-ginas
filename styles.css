@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.6);
+}
+
+.hero-content h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: #f97316;
+    text-shadow: 0 0 10px rgba(249, 115, 22, 0.8);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.btn-hero {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #f97316;
+    color: #f8fafc;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-hero:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(249, 115, 22, 0.7);
+}
+
+/* Highlights (Carrossel) */
+.highlights {
+    padding: 60px 20px;
+    background-color: #4b5563;
+    text-align: center;
+}
+
+.highlights h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    color: #f97316;
+    margin-bottom: 40px;
+}
+
+.carousel {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-item {
+    display: none;
+    align-items: center;
+    gap: 20px;
+}
+
+.carousel-item.active {
+    display: flex;
+}
+
+.carousel-item img {
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-info h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    color: #f8fafc;
+}
+
+.carousel-info p {
+    font-size: 1.2rem;
+    color: #d1d5db;
+}
+
+.carousel-controls button {
+    background: #f97316;
+    border: none;
+    padding: 10px 20px;
+    color: #f8fafc;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.carousel-controls button:hover {
+    background: #ea580c;
+}
+
+/* História */
+.history {
+    padding: 60px 20px;
+    background-color: #0f172a;
+    text-align: center;
+}
+
+.history h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    color: #f97316;
+    margin-bottom: 40px;
+}
+
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline-item {
+    margin: 20px 0;
+    padding: 20px;
+    background: #4b5563;
+    border-radius: 10px;
+    position: relative;
+}
+
+.timeline-item .year {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    color: #f97316;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Galeria */
+.gallery {
+    padding: 60px 20px;
+    background-color: #4b5563;
+}
+
+.gallery h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    color: #f97316;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.filters {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.filters button {
+    padding: 10px 20px;
+    margin: 5px;
+    background: #0f172a;
+    color: #f8fafc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filters button.active, .filters button:hover {
+    background: #f97316;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid-item {
+    background: #0f172a;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.5);
+}
+
+.grid-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.grid-item .info {
+    padding: 15px;
+    text-align: center;
+}
+
+.grid-item h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    color: #f97316;
+}
+
+/* Contato */
+.contact {
+    padding: 60px 20px;
+    background-color: #0f172a;
+    text-align: center;
+}
+
+.contact h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    color: #f97316;
+    margin-bottom: 40px;
+}
+
+.contact form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input, .contact textarea {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #4b5563;
+    color: #f8fafc;
+}
+
+.contact .btn-submit {
+    padding: 15px;
+    background: #f97316;
+    color: #f8fafc;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Orbitron', sans-serif;
+    cursor: pointer;
+}
+
+.contact .btn-submit:hover {
+    background: #ea580c;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #f97316;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background: #4b5563;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    color: #f97316;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    /* Hero Section */
+    .hero {
+        background-image: url('imagem-estatica.jpg'); /* Substitua pelo caminho da sua imagem */
+        background-size: cover;
+        background-position: center;
+    }
+    .hero-video {
+        display: none; /* Remove o vídeo em mobile para melhorar desempenho */
+    }
+    .hero-content h1 {
+        font-size: 3rem; /* Reduz o tamanho do título */
+    }
+    .hero-content p {
+        font-size: 1.2rem; /* Reduz o tamanho do parágrafo */
+    }
+    .btn-hero {
+        padding: 10px 20px; /* Reduz o tamanho do botão */
+        font-size: 1rem;
+    }
+
+    /* Highlights (Carrossel) */
+    .highlights h2 {
+        font-size: 2.5rem; /* Reduz o tamanho do título */
+    }
+    .carousel-item {
+        flex-direction: column; /* Empilha os itens verticalmente */
+        text-align: center;
+    }
+    .carousel-item img {
+        width: 100%; /* Imagens ocupam toda a largura */
+    }
+    .carousel-info h3 {
+        font-size: 1.5rem; /* Reduz o tamanho do título */
+    }
+    .carousel-info p {
+        font-size: 1rem; /* Reduz o tamanho do texto */
+    }
+    .carousel-controls button {
+        padding: 8px 16px; /* Reduz o tamanho dos botões */
+        font-size: 1.2rem;
+    }
+
+    /* História */
+    .history h2 {
+        font-size: 2.5rem; /* Reduz o tamanho do título */
+    }
+    .timeline-item {
+        margin: 10px 0; /* Reduz as margens */
+    }
+    .timeline-item .year {
+        font-size: 1.2rem; /* Reduz o tamanho do ano */
+    }
+
+    /* Galeria */
+    .gallery h2 {
+        font-size: 2.5rem; /* Reduz o tamanho do título */
+    }
+    .filters {
+        display: flex;
+        flex-direction: column; /* Empilha os botões de filtro */
+        align-items: center;
+    }
+    .filters button {
+        width: 80%; /* Faz os botões ocuparem mais espaço */
+        margin: 5px 0;
+    }
+    .grid {
+        grid-template-columns: 1fr; /* Transforma a grade em uma única coluna */
+    }
+    .grid-item img {
+        height: 200px; /* Reduz a altura das imagens */
+    }
+    .grid-item h3 {
+        font-size: 1.5rem; /* Reduz o tamanho do título */
+    }
+
+    /* Contato */
+    .contact h2 {
+        font-size: 2.5rem; /* Reduz o tamanho do título */
+    }
+    .contact form {
+        width: 90%; /* Faz o formulário ocupar quase toda a largura */
+    }
+    .contact input, .contact textarea {
+        width: 100%; /* Campos ocupam toda a largura disponível */
+    }
+    .social-links a {
+        font-size: 0.9rem; /* Reduz o tamanho dos links sociais */
+    }
+
+    /* Footer */
+    footer {
+        font-size: 0.9rem; /* Reduz o tamanho do texto */
+    }
+}
